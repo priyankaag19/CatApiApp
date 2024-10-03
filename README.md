@@ -21,7 +21,7 @@ npm (Node Package Manager)
 Installation
 
 ## Clone the repository:
-git clone https://github.com/priyankaag19/cat-api-app.git
+git clone https://github.com/priyankaag19/CatApiApp.git
 
 ## Navigate to the project directory:
 cd cat-api-app
