@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom'; // No need to import Router here
+import CatList from './components/CatList';
+import CatDetail from './components/CatDetail';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Routes> {/* Use Routes for routing */}
+        <Route path="/" element={<CatList />} /> {/* Use element prop for components */}
+        <Route path="/cat/:id" element={<CatDetail />} />
+      </Routes>
+    </>
   );
 }
 

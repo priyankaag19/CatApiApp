@@ -1,38 +1,28 @@
-.App {
-  text-align: center;
-}
+/* src/styles.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 350px; /* Set a fixed height for all cards */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between; /* Ensure the content is spaced evenly */
 }
 
-.App-link {
-  color: #61dafb;
+.card:hover {
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-img-top {
+  height: 200px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  width: 100%; /* Make sure the image takes the full width of the card */
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Push the button to the bottom */
 }
